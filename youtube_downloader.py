@@ -3,7 +3,7 @@ import re
 import os
 from pytube import YouTube
 
-#set output path of downloaded video/audio
+#set output path for downloaded video/audio
 output_path = f"{os.environ['HOME']}/Desktop"
 
 def download_mp4(youtube_object):
