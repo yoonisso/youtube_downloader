@@ -1,2 +1,2 @@
 # youtube_downloader
-simple youtube downloader with gui
+simple youtube downloader with minimalistic gui
