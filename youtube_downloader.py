@@ -3,6 +3,7 @@ import re
 import os
 from pytube import YouTube
 
+#set output path of downloaded video/audio
 output_path = f"{os.environ['HOME']}/Desktop"
 
 def download_mp4(youtube_object):
@@ -21,7 +22,6 @@ def download_mp3(youtube_object):
     except Exception as e:
         print(f"An error has occurred: {e}")
 
-# building window
 layout = [
             [sg.Text('Enter Youtube video link'), sg.InputText()],
             [sg.Radio("MP3", "file_type", default=True, key="mp3")],
@@ -30,7 +30,6 @@ layout = [
         ]
 window = sg.Window('youtube downloader', layout)
 
-# Event Loop to process "events" and get the "values" of the inputs
 while True:
     event, values = window.read()
     if event == sg.WIN_CLOSED or event == 'Cancel':
